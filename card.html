@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moyinoluwa Popoola | Profile Card</title>
+    <link rel="icon" href="Moh.jpg" type="image/png">
+    <link rel="stylesheet" href="card.css">
+</head>
+<body>
+    <main class="container">
+        <article data-testid="test-profile-card" class="profile-card">
+            <figure class="avatar-section">
+                <img id="avatarImage" src="Moh.jpg" alt="Moyinoluwa Popoola" data-testid="test-avatar-image">
+                <figcaption data-testid="test-user-name">Moyinoluwa Popoola</figcaption>
+                <label for="avatar-upload" class="upload-btn">Upload New Avatar</label>
+                <input type="file" id="avatar-upload" accept="image/*" style="display: none;">
+            </figure>
+            <section class="profile-info">
+                <p data-testid="test-user-bio">
+                     Passionate about creating solutions that make an impact. I enjoy collaborating with teams to build clean, responsive, and user-focused websites while growing my expertise in product design and development.
+                </p>
+                <p class="time">
+                    <strong>Current Time (ms):</strong>
+                    <span data-testid="test-user-time" id="userTime"></span>
+                </p>
+            </section>
+            <nav data-testid="test-user-social-links" class="social-links">
+                <a href="https://www.linkedin.com/in/moyinoluwa-popoola-903542340/" target="_blank" rel="noopener noreferrer" data-testid="test-linkedin-link">
+                    <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="Linkedin">
+                </a>
+                <a href="https://github.com/OhMyMoh" target="_blank" rel="noopener noreferrer" data-testid="test-github-link">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub">
+                </a>
+                <a href="https://www.instagram.com/OhMyMoh20" target="_blank" rel="noopener noreferrer" data-testid="test-instgram-link">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+                </a>
+            </nav>
+            <div class="lists">
+                <section data-testid="test-user-hobbies" class="hobbies">
+                    <h3>Hobbies</h3>
+                    <ul>
+                        <li>Cooking</li>
+                        <li>Movies</li>
+                        <li>Games</li>
+                    </ul>
+                </section>
+                <section data-testid="test-user-dislikes" class="dislikes">
+                    <h3>Dislikes</h3>
+                    <ul>
+                        <li>Procastination</li>
+                        <li>Lying</li>
+                        <li>Sickness</li>
+                    </ul>
+            </div>
+        </article>
+    </main>
+    <script src="card.js"></script>
+</body>
+</html>
