@@ -20,6 +20,26 @@ body {
   align-items: center;
 }
 
+.extra-links {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.extra-links a {
+  background: #000;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.extra-links a:hover {
+  background: #0056b3;
+}
+
 .profile-card {
   background: #fff;
   border-radius: 20px;
@@ -48,6 +68,136 @@ body {
   font-size: 1.4rem;
   font-weight: 600;
 }
+
+main {
+  max-width: 700px;
+  margin: 3rem auto;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+main h1, main h2 {
+  text-align: center;
+  color: #000;
+}
+
+main section {
+  margin-bottom: 1.5rem;
+}
+
+main[data-testid="test-about-page"] {
+  background-color: #fff;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+main[data-testid="test-about-page"] :hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+main[data-testid="test-about-page"] section h2 {
+  font-size: 1.2rem;
+  color: #000;
+  margin-bottom: 0.5rem;
+}
+
+main[data-testid="test-about-page"] section p,
+main[data-testid="test-about-page"] section ul {
+  color: #444;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+main[data-testid="test-about-page"] ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+
+main[data-testid="test-contact-page"] {
+  background-color: #fff;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+main[data-testid="test-contact-page"]:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+form label {
+  font-weight: 500;
+  color: #111;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: border 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus {
+  outline: none;
+  border: 1px solid #000;
+}
+
+form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+button[type="submit"] {
+  background: #000;
+  color: #fff;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background: #0056b3;
+}
+
+.feedback {
+  text-align: center;
+  font-weight: 500;
+  margin-top: 1rem;
+}
+
+.extra-links {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.extra-links a {
+  background: #000;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.extra-links a:hover {
+  background: #0056b3;
+}
+
 
 .profile-info {
   margin: 1rem 0;
@@ -124,7 +274,17 @@ body {
   background: #0056b3;
 }
 
-/* Responsive layout */
+.error-msg {
+  color: red;
+  font-size: 0.85rem;
+  margin-top: -0.5rem;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+
+
+
 @media (max-width: 768px) {
   .profile-card {
     width: 90%;
@@ -138,5 +298,18 @@ body {
   img {
     width: 120px;
     height: 120px;
+  }
+  main {
+    width: 90%;
+    padding: 1.5rem;
+  }
+
+  form input,
+  form textarea {
+    font-size: 0.9rem;
+  }
+
+  main[data-testid="test-about-page"] section h2 {
+    font-size: 1.1rem;
   }
 }
